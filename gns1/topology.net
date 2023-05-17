@@ -1,0 +1,219 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7202]
+    workingdir = C:\Users\user\AppData\Local\Temp
+    udp = 10201
+    [[3660]]
+        image = C:\Users\user\Downloads\c3660-a3jk9s-mz.124-15.T14.image
+        sparsemem = True
+        ghostios = True
+        chassis = 3660
+    [[ROUTER R4]]
+        model = 3660
+        console = 2114
+        aux = 2514
+        cnfg = configs\R4.cfg
+        f0/0 = R6 f1/0
+        f0/1 = R5 f0/0
+        slot1 = NM-1FE-TX
+        f1/0 = R3 f0/0
+        x = -209.446609407
+        y = -59.2649352638
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3660
+        console = 2115
+        aux = 2515
+        cnfg = configs\R6.cfg
+        f0/0 = R7 f0/0
+        f0/1 = R8 f0/0
+        slot1 = NM-1FE-TX
+        f1/0 = R4 f0/0
+        x = -29.446609407
+        y = 30.7350647362
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3660
+        console = 2116
+        aux = 2516
+        cnfg = configs\R7.cfg
+        f0/0 = R6 f0/0
+        x = -32.2750365317
+        y = 226.735064736
+        z = 1.0
+        hx = -9.9558441227
+        hy = -29.2426406871
+    [[ROUTER R2]]
+        model = 3660
+        console = 2113
+        aux = 2513
+        cnfg = configs\R2.cfg
+        f0/0 = R3 f0/1
+        f0/1 = R1 f1/0
+        slot1 = NM-1FE-TX
+        f1/0 = R5 f1/0
+        x = -494.174531468
+        y = -371.247691321
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = C:\Users\user\AppData\Local\Temp
+    udp = 10301
+    [[3660]]
+        image = C:\Users\user\Downloads\c3660-a3jk9s-mz.124-15.T14.image
+        sparsemem = True
+        ghostios = True
+        chassis = 3660
+    [[ROUTER R5]]
+        model = 3660
+        console = 2117
+        aux = 2517
+        cnfg = configs\R5.cfg
+        f0/0 = R4 f0/1
+        f0/1 = R1 f0/0
+        slot1 = NM-1FE-TX
+        f1/0 = R2 f1/0
+        x = -543.002958593
+        y = 1.88939366871
+        z = 1.0
+        hx = 4.77207793865
+        hy = 48.5391052434
+    [[ROUTER R1]]
+        model = 3660
+        console = 2118
+        aux = 2518
+        cnfg = configs\R1.cfg
+        f0/0 = R5 f0/1
+        f0/1 = R3 f1/0
+        slot1 = NM-1FE-TX
+        f1/0 = R2 f0/1
+        slot2 = NM-1FE-TX
+        x = -724.68419946
+        y = -241.691342135
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3660
+        console = 2119
+        aux = 2519
+        cnfg = configs\R3.cfg
+        f0/0 = R4 f1/0
+        f0/1 = R2 f0/0
+        slot1 = NM-1FE-TX
+        f1/0 = R1 f0/1
+        x = -261.446609407
+        y = -269.264935264
+        z = 1.0
+        hx = 52.8553390593
+        hy = -22.1715728753
+    [[ROUTER R8]]
+        model = 3660
+        console = 2120
+        aux = 2520
+        cnfg = configs\R8.cfg
+        f0/0 = R6 f0/1
+        x = 268.553390593
+        y = -17.2649352638
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "f0/0"
+        x = -6.4909879665
+        y = 28.3609645047
+        interface = R8 f0/0
+    [[NOTE 2]]
+        text = "f0/1"
+        x = -3.63678969963
+        y = 5.94554141351
+        interface = R3 f0/1
+    [[NOTE 3]]
+        text = "f1/0"
+        x = -6.92932644233
+        y = 24.3767393339
+        interface = R3 f1/0
+    [[NOTE 4]]
+        text = "f0/0"
+        x = 42.6143925385
+        y = 60.8273544826
+        interface = R3 f0/0
+    [[NOTE 5]]
+        text = "f0/0"
+        x = 69.6367896996
+        y = 38.0544585865
+        interface = R2 f0/0
+    [[NOTE 6]]
+        text = "f0/1"
+        x = -1.86982837344
+        y = 41.5983435322
+        interface = R2 f0/1
+    [[NOTE 7]]
+        text = "f1/0"
+        x = 27.8098808036
+        y = 61.6618540001
+        interface = R2 f1/0
+    [[NOTE 8]]
+        text = "f1/0"
+        x = 67.8698283734
+        y = 2.40165646778
+        interface = R1 f1/0
+    [[NOTE 9]]
+        text = "f0/1"
+        x = 72.9293264423
+        y = 19.6232606661
+        interface = R1 f0/1
+    [[NOTE 10]]
+        text = "f0/0"
+        x = 56.9153075953
+        y = 54.0633445327
+        interface = R1 f0/0
+    [[NOTE 11]]
+        text = "f0/0"
+        x = 33.0
+        y = -18.0
+        interface = R7 f0/0
+    [[NOTE 12]]
+        text = "f0/1"
+        x = 72.4909879665
+        y = 15.6390354953
+        interface = R6 f0/1
+    [[NOTE 13]]
+        text = "f0/0"
+        x = 33.0
+        y = 62.0
+        interface = R6 f0/0
+    [[NOTE 14]]
+        text = "f1/0"
+        x = -2.77708764
+        y = 4.11145618
+        interface = R6 f1/0
+    [[NOTE 15]]
+        text = "f1/0"
+        x = 38.1901191964
+        y = -17.6618540001
+        interface = R5 f1/0
+    [[NOTE 16]]
+        text = "f0/1"
+        x = 9.08469240467
+        y = -10.0633445327
+        interface = R5 f0/1
+    [[NOTE 17]]
+        text = "f0/0"
+        x = 72.3442135136
+        y = 14.7866191704
+        interface = R5 f0/0
+    [[NOTE 18]]
+        text = "f1/0"
+        x = 23.3856074615
+        y = -16.8273544826
+        interface = R4 f1/0
+    [[NOTE 19]]
+        text = "f0/1"
+        x = -6.34421351365
+        y = 29.2133808296
+        interface = R4 f0/1
+    [[NOTE 20]]
+        text = "f0/0"
+        x = 68.77708764
+        y = 39.88854382
+        interface = R4 f0/0
